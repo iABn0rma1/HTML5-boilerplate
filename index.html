@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>HTML5 Boilerplate</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="A brief description of the page.">
+    <meta name="keywords" content="HTML boilerplate, HTML template, web development, front-end, starter code, SEO">
+    <meta name="author" content="Aman Barthwal">
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Boilerplate">
+    <meta property="og:description" content="A brief description of the page.">
+    <meta property="og:image" content="https://github.com/iABn0rma1/HTML-boilerplate/blob/main/assets/preview-eg.webp">
+    <meta property="og:url" content="https://i-abnormal.netlify.app">
+    <meta property="og:type" content="website">
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="Boilerplate">
+    <meta name="twitter:site" content="@amanbarthwal0110">
+    <meta name="twitter:creator" content="@amanbarthwal0110">
+    <meta name="twitter:title" content="Boilerplate">
+    <meta name="twitter:description" content="A brief description of the page.">
+    <meta name="twitter:image" content="https://github.com/iABn0rma1/HTML-boilerplate/blob/main/assets/preview-eg.webp">
+    <!-- Favicon Links -->
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon_io/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon_io/favicon_io/favicon-32x32.png">
+    <link rel="icon" type="image/x-icon" href="assets/favicon_io/favicon.ico">
+    <link rel="apple-touch-icon" href="assets/favicon_io/apple-touch-icon.png">
+    <link rel="manifest" href="assets/favicon_io/site.webmanifest">
+    <!-- CSS Links -->
+    <link href="https://cdn.jsdelivr.net/npm/modern-normalize@v2.0.0/modern-normalize.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+    <!-- Structured Data Markup -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "name": "Boilerplate",
+        "description": "A detailed description of the page for structured data.",
+        "url": "https://i-abnormal.netlify.app",
+        "image": "https://github.com/iABn0rma1/HTML-boilerplate/blob/main/assets/preview-eg.webp",
+        "author": {
+            "@type": "Person",
+            "name": "Aman Barthwal"
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "iABn0rma1",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "https://i-abnormal.netlify.app/images/icon.png"
+            }
+        },
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://iabn0rma1.github.io/HTML-boilerplate"
+        }
+    }
+    </script>
+
+    <style>
+        :root {
+            --background-color: #f9f9f9;
+            --text-color: #333;
+            --header-footer-bg: #ffffff;
+            --nav-bg: #d0e2ff;
+            --element-bg: #ffffff;
+            --carousel-bg: rgba(255, 255, 255, 0.7);
+            --shadow-color: rgba(0, 0, 0, 0.1);
+            --link-color: #007bff;
+            --link-hover-color: #0056b3;
+            --input-bg: #ffffff;
+            --input-border: #ced4da;
+        }
+
+        [data-theme="dark"] {
+            --background-color: #333;
+            --text-color: #f9f9f9;
+            --header-footer-bg: #444;
+            --nav-bg: #444;
+            --element-bg: #555;
+            --carousel-bg: rgba(0, 0, 0, 0.7);
+            --shadow-color: rgba(255, 255, 255, 0.1);
+            --link-color: #66b2ff;
+            --link-hover-color: #3399ff;
+            --input-bg: #666;
+            --input-border: #888;
+        }
+
+        body {
+            display: flex;
+            min-height: 100vh;
+            flex-direction: column;
+            color: var(--text-color);
+            background-color: var(--background-color);
+        }
+        
+        header,
+        footer {
+            background-color: var(--header-footer-bg);
+            box-shadow: 0 2px 4px var(--shadow-color);
+        }
+
+        main {
+            flex: 1;
+        }
+
+        #fadein {
+            animation: fadeinall 1s normal 0.3s both;
+        }
+
+        .navbar-fixed-top {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 10000;
+            background-color: var(--nav-bg);
+            box-shadow: 0 2px 4px var(--shadow-color);
+        }
+
+        .content-sections {
+            background-color: var(--header-footer-bg);
+        }
+
+        .accordion-item,
+        .accordion-body,
+        .accordion-button,
+        .carousel-caption,
+        .table,
+        .form-control,
+        #cookie-notice {
+            color: var(--text-color);
+            background-color: var(--element-bg);
+            box-shadow: 0 2px 4px var(--shadow-color);
+        }
+        #cookie-notice {
+            z-index: 999;
+        }
+
+        .announcement-bar {
+            padding: 10px;
+            background-color: var(--element-bg);
+            box-shadow: 0 2px 4px var(--shadow-color);
+            z-index: 99999;
+        }
+
+        a {
+            color: var(--link-color);
+        }
+        a:hover {
+            color: var(--link-hover-color);
+        }
+
+        .form-control {
+            border: 1px solid var(--input-border);
+        }
+
+        .form-control:focus {
+            border: 1px solid var(--input-border);
+            box-shadow: none;
+        }
+        .btn-100 {
+            width: 100%;
+        }
+        .tnc {
+            color:#a0a5a8;
+        }
+        
+        .custom-radio-box {
+            display: flex;
+            justify-content: space-between;
+            overflow: auto;
+        }
+        .custom-radio-box input[type="radio"] {
+            display: none;
+        }
+        .custom-radio-box input[type="radio"]+label {
+            display: inline-block;
+            background-color: var(--input-bg);
+            color: var(--text-color);
+            padding: 5px 10px;
+            border: 1px solid var(--input-border);
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .custom-radio-box input[type="radio"]:checked+label {
+            background-color: var(--link-color);
+            color: white;
+        }
+        .contact-form-box {
+            background-color: var(--element-bg);
+            width: 90%;
+            max-width: 600px;
+            padding: 20px;
+            margin: 20px auto;
+            border-radius: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        @keyframes fadeinall {
+            0% {
+                opacity: 1;
+            }
+
+            97% {
+                opacity: 0;
+            }
+
+            98% {
+                opacity: 0;
+                -webkit-transform: translateY(0);
+                transform: translateY(0);
+            }
+
+            100% {
+                opacity: 0;
+                -webkit-transform: translateY(-100%);
+                transform: translateY(-100%);
+                z-index: -1;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="fadein" class="position-fixed top-0 start-0 w-100 h-100 bg-white"></div>
+    
+    <div id="loader-wrapper" class="bg-white position-fixed top-0 z-3 w-100 h-100 text-center">
+        <div class="spinner-border mt-5" role="status">
+            <span class="visually-hidden">Loading...</span>
+        </div>
+    </div>
+
+    <div class="announcement-bar position-fixed top-0 w-100 p-2 text-bg-dark d-flex justify-content-between">
+        <p>This is an announcement.</p>
+        <button type="button" class="btn-close btn-close-white" onClick="parentNode.remove()" aria-label="Close"></button>
+    </div>
+
+    <header>
+        <h1 class="p-2">Boilerplate</h1>
+        <nav id="navbar" class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="example.html">Navbar</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Features</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Pricing</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link disabled">Disabled</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Dropdown link
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Action</a></li>
+                                <li><a class="dropdown-item" href="#">Another action</a></li>
+                                <li><a class="dropdown-item" href="#">Something else here</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <button id="theme-toggle" class="btn btn-secondary ms-auto">Toggle Dark Theme</button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="m-5">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do.</p>
+        <img src="https://via.placeholder.com/800x200/" alt="" class="d-block w-100">
+        <div class="content-sections">
+            <section class="p-4">Section 1</section>
+            <section class="p-4">Section 2</section>
+            <section class="p-4">Section 3</section>
+        </div>
+        <div class="accordion mt-4" id="accordionExample">
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingOne">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                        Accordion Item #1
+                    </button>
+                </h2>
+                <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingTwo">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                        Accordion Item #2
+                    </button>
+                </h2>
+                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingThree">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                        Accordion Item #3
+                    </button>
+                </h2>
+                <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+                </div>
+            </div>
+        </div>
+        <div id="carouselExample" class="carousel slide mt-4" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="https://via.placeholder.com/800x400/" class="d-block w-100" alt="...">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>First slide label</h5>
+                        <p>Some representative placeholder content for the first slide.</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="https://via.placeholder.com/800x400/" class="d-block w-100" alt="...">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Second slide label</h5>
+                        <p>Some representative placeholder content for the second slide.</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="https://via.placeholder.com/800x400/" class="d-block w-100" alt="...">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Third slide label</h5>
+                        <p>Some representative placeholder content for the third slide.</p>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </main>
+
+    <div class="container">
+        <div class="row">
+            <!-- First form column -->
+            <div class="col-md-6">
+                <div class="contact-form-box">
+                    <form action="https://example.com/submit-form" method="POST">
+                        <div class="mb-3">
+                            <label for="name" class="form-label mt-2">Name:</label>
+                            <input type="text" class="form-control" id="name" name="name" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label mt-2">Email:</label>
+                            <input type="email" class="form-control" id="email" name="email" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="message" class="form-label mt-2">Address:</label>
+                            <textarea class="form-control" id="message" name="message" rows="5" required></textarea>
+                        </div>
+                        <div class="mb-3">
+                            <button type="submit" class="btn btn-primary">Submit</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <!-- Duplicate form column with requested configuration -->
+            <div class="col-md-6">
+                <div class="contact-form-box">
+                    <form action="https://example.com/submit-form" method="POST">
+                        <div class="row mb-3">
+                            <div class="col">
+                                <input type="text" class="form-control" id="first-name" name="first-name" required placeholder="First Name">
+                            </div>
+                            <div class="col">
+                                <input type="text" class="form-control" id="last-name" name="last-name" required placeholder="Last Name">
+                            </div>
+                        </div>
+                        <div class="row mb-3">
+                            <div class="col">
+                                <input type="text" class="form-control flatpickr" id="date" name="date" required placeholder="Date of Birth">
+                            </div>
+                            <div class="col custom-radio-box">
+                                <input type="tel" class="form-control" id="phone" name="phone" pattern="[0-9]{10}" required placeholder="Phone Number">
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <input type="email" class="form-control" id="email-duplicate" name="email-duplicate" required placeholder="Email">
+                        </div>
+                        <div class="mb-3">
+                            <textarea class="form-control" id="message-duplicate" name="message-duplicate" rows="5" required placeholder="Address"></textarea>
+                        </div>
+                        <div class="mb-3 form-check">
+                            <input type="checkbox" class="form-check-input" id="tnc" name="tnc" required>
+                            <label class="form-check-label tnc" for="tnc">
+                                I accept the terms and conditions for signing up to this service, and hereby confirm I have read the privacy policy.
+                            </label>
+                        </div>
+                        <div class="mb-3">
+                            <button type="submit" class="btn btn-primary btn-100">Submit</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="cookie-notice" class="position-fixed bottom-0 w-100 text-bg-dark p-3 text-center">
+        <p>This website uses cookies to ensure you get the best experience on our website.</p>
+        <button type="button" class="btn btn-primary">Got it!</button>
+    </div>
+
+    <footer class="text-center pt-2">
+        <p>&copy; 2024 Your Company. All rights reserved.</p>
+    </footer>
+
+    <!-- JS Scripts -->
+    <script src="script.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            flatpickr(".flatpickr", {
+                // optional configuration options
+            });
+
+            setTimeout(() => {
+                document.getElementById('loader-wrapper').style.display = 'none';
+            }, 1000);
+        });
+    </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Fade in effect
+            setTimeout(function() {
+                const fadeinElement = document.getElementById("fadein");
+                fadeinElement.style.opacity = 0;
+                fadeinElement.style.transition = 'opacity 1s ease-in-out';
+                setTimeout(function() {
+                    fadeinElement.remove();
+                }, 1000);
+            }, 1000);
+    
+            // Loader fade out
+            const loaderWrapper = document.getElementById('loader-wrapper');
+            loaderWrapper.style.opacity = 1;
+            loaderWrapper.style.transition = 'opacity 0.7s ease-out';
+            setTimeout(function() {
+                loaderWrapper.style.opacity = 0;
+            }, 700);
+            setTimeout(function() {
+                loaderWrapper.style.display = 'none';
+            }, 1400);
+    
+            // Navbar fixed on scroll
+            const themeToggleBtn = document.getElementById('theme-toggle');
+            themeToggleBtn.addEventListener('click', () => {
+                document.body.dataset.theme = document.body.dataset.theme === 'dark' ? 'light' : 'dark';
+            });
+    
+            const cookieNotice = document.getElementById('cookie-notice');
+            const cookieBtn = cookieNotice.querySelector('.btn');
+            cookieBtn.addEventListener('click', () => {
+                cookieNotice.style.display = 'none';
+            });
+    
+            const navbar = document.getElementById('navbar');
+            const header = document.querySelector('header');
+            const headerHeight = header.offsetHeight;
+            if (window.scrollY >= headerHeight) {
+                navbar.classList.add('navbar-fixed-top');
+            } else {
+                navbar.classList.remove('navbar-fixed-top');
+            }
+    
+            window.addEventListener('scroll', () => {
+                if (window.scrollY >= headerHeight) {
+                    navbar.classList.add('navbar-fixed-top');
+                } else {
+                    navbar.classList.remove('navbar-fixed-top');
+                }
+            });
+        });
+    </script>
+    </body>
+
+</html>
