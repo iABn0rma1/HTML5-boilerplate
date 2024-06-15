@@ -24,7 +24,7 @@
     <meta name="twitter:image" content="https://via.placeholder.com/800x200/">
     <!-- Favicon Links -->
     <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon_io/favicon-16x16.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon_io/favicon_io/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon_io/favicon-32x32.png">
     <link rel="icon" type="image/x-icon" href="assets/favicon_io/favicon.ico">
     <link rel="apple-touch-icon" href="assets/favicon_io/apple-touch-icon.png">
     <link rel="manifest" href="assets/favicon_io/site.webmanifest">
@@ -142,7 +142,6 @@
         }
 
         .announcement-bar {
-            padding: 10px;
             background-color: var(--element-bg);
             box-shadow: 0 2px 4px var(--shadow-color);
             z-index: 99999;
@@ -163,18 +162,10 @@
             border: 1px solid var(--input-border);
             box-shadow: none;
         }
-        .btn-100 {
-            width: 100%;
-        }
         .tnc {
             color:#a0a5a8;
         }
         
-        .custom-radio-box {
-            display: flex;
-            justify-content: space-between;
-            overflow: auto;
-        }
         .custom-radio-box input[type="radio"] {
             display: none;
         }
@@ -200,6 +191,7 @@
             border-radius: 20px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
         }
+        
         @keyframes fadeinall {
             0% {
                 opacity: 1;
@@ -393,7 +385,7 @@
                             <div class="col">
                                 <input type="text" class="form-control flatpickr" id="date" name="date" required placeholder="Date of Birth">
                             </div>
-                            <div class="col custom-radio-box">
+                            <div class="col custom-radio-box d-flex justify-content-between;">
                                 <input type="tel" class="form-control" id="phone" name="phone" pattern="[0-9]{10}" required placeholder="Phone Number">
                             </div>
                         </div>
@@ -410,7 +402,7 @@
                             </label>
                         </div>
                         <div class="mb-3">
-                            <button type="submit" class="btn btn-primary btn-100">Submit</button>
+                            <button type="submit" class="btn btn-primary w-100">Submit</button>
                         </div>
                     </form>
                 </div>
